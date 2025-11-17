@@ -28,7 +28,8 @@ h1 {
 .div-pai {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 26px;
   margin: 3rem;
 }
 
@@ -67,29 +68,28 @@ h1 {
   color: #ffffff;
 }
 
-.div-1:hover .img-add {
-  fill: aqua;
-}
 
 .add-perfil {
   background-color: #1e1e20;
   border-radius: 10px;
 }
 
-.img-add {
-  border-style: 5px solid white;
-  width: 50%;
-  height: 50%;
-  color: aqua;
+.div-1:hover .svg-icon {
+  color: #ECECEC;
+  transform: rotatez(180deg);
 }
 
-/* .add-icon {
+.svg-icon {
   width: 100%;
   height: 100%;
-} */
+  fill: #1e1e20;
+  color: #6F6F70;
+  transition: transform 0.7s ease;
+}
 
 span {
   color: #9c9c9c;
+  font-size: 1.2rem;
 }
 
 button {
@@ -97,4 +97,11 @@ button {
   border-color: aliceblue;
   border-radius: 20px;
   padding: 10px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  
 }
