@@ -1,7 +1,6 @@
-/* * {
-  font: ibm;
+html {
+  font-size: 100%;
 }
-*/
 
 body {
   background-color: #121214;
@@ -28,54 +27,56 @@ h1 {
 .div-pai {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 26px;
+  gap: 1.625rem;
   margin: 3rem;
 }
 
 .div-1 {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  width: 160px;
-  height: 194px;
-  padding: 3px;
-  margin: 3px;
-  border-radius: 10px;
+  gap: 1rem;
+  width: 100%;
+  max-width: 10rem;
+  height: 12.125rem;
+  padding: 0.1875rem;
+  margin: 0.1875rem;
+  border-radius: 0.75rem;
   overflow: hidden;
-  border: 4px solid transparent;
+  border: 0.25rem solid transparent;
   cursor: pointer;
   position: relative;
+  transition: transform 0.4s ease, border 0.25s ease;
 }
 
 .div-1 img {
   width: 100%;
+  max-width: 10rem;
   height: 100%;
   object-fit: cover;
-  border: 4px solid transparent;
-  border-radius: 12px;
-  transition: border 0.3s ease;
+  border: 0.25rem solid transparent;
+  border-radius: inherit;
+  box-sizing: border-box;
+  display: block;
 }
 
 .div-1:hover .img-avatar {
-  transform: scale(1.15);
-  border: 1.5px solid white;
-  border-radius: 10px;
-  z-index: 10;
+  transform: scale(1.1);
+  border-radius: inherit;
 }
 
 .div-1:hover span {
   color: #ffffff;
 }
 
-
 .add-perfil {
   background-color: #1e1e20;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 .div-1:hover .svg-icon {
-  color: #ECECEC;
+  color: #ececec;
   transform: rotatez(180deg);
 }
 
@@ -83,7 +84,7 @@ h1 {
   width: 100%;
   height: 100%;
   fill: #1e1e20;
-  color: #6F6F70;
+  color: #6f6f70;
   transition: transform 0.7s ease;
 }
 
@@ -95,13 +96,19 @@ span {
 button {
   border-style: solid;
   border-color: aliceblue;
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: 1.25rem;
+  padding: 0.625rem;
 }
 
 button:hover {
   background-color: white;
   color: black;
   cursor: pointer;
-  
+}
+
+@media (max-width: 600px) {
+  .div-pai {
+    flex-direction: column;
+    align-items: center;
+  }
 }
